@@ -1,6 +1,6 @@
 <section>
-  <form (ngSubmit)="onRegister()" #MyForm="ngForm">
-    <div class="container">
+  <div class="container">
+    <form *ngIf="showForm" (ngSubmit)="onRegister()" #MyForm="ngForm">
       <div class="col-12">
         <label>Seleccione el tipo de producto.</label>
         <hr>
@@ -38,6 +38,7 @@
           <button class="btn btn-primary" [disabled]="MyForm.invalid" type="submit">¡Registrar producto!</button>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+    <button (click)="openForm()" >hola</button>
+  </div>
 </section>
