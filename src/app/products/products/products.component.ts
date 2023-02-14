@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-products',
@@ -9,10 +8,10 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 export class ProductsComponent {
 
   register = {
-    productName : '',
-    productValue : ''
+    productName: '',
+    productValue: ''
   }
-  onRegister(){
+  onRegister() {
     console.log(this.register)
   }
 }

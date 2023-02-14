@@ -1,19 +1,43 @@
 <section>
   <form (ngSubmit)="onRegister()" #MyForm="ngForm">
     <div class="container">
-      <div class="mb-3">
-        <label class="form-label">Nombre producto.</label>
-        <input type="text" id="name" name="productName" required [(ngModel)]="register.productName" class="form-control"
-          placeholder="Dígite el nombre del producto.">
-        <p>error message!</p>
+      <div class="col-12">
+        <label>Seleccione el tipo de producto.</label>
+        <hr>
+        <select class="form-select form-select-sm">
+          <option value="1">Crédito inteligente.</option>
+          <option value="2">Crédito nómina.</option>
+          <option value="3">Línea Mujer.</option>
+          <option value="4">Convenio SUAM.</option>
+          <option value="5">PA Bancolombia.</option>
+        </select>
       </div>
-      <div class="mb-3">
-        <label class="form-label">Valor producto.</label>
-        <input type="number" id="value" name="productValue" required [(ngModel)]="register.productValue"
-          class="form-control" placeholder="Dígite el valor del producto.">
-        <p>error message!</p>
+      <hr>
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3">
+            <label class="form-label">Nombre producto.</label>
+            <input type="text" id="name" name="productName" required [(ngModel)]="register.productName"
+              class="form-control" placeholder="Dígite el nombre del producto.">
+            <p *ngIf="register.productName == '' ">Debes ingresar algún valor.</p>
+          </div>
+        </div>
+        <br>
+        <div class="col-6">
+          <div class="mb-3">
+            <label class="form-label">Valor producto.</label>
+            <input type="number" id="value" name="productValue" required [(ngModel)]="register.productValue"
+              class="form-control" placeholder="Dígite el valor del producto.">
+            <p *ngIf="register.productValue == '' ">Debes ingresar algún valor.</p>
+          </div>
+        </div>
       </div>
-      <button [disabled]="MyForm.invalid" type="submit">¡Registrar producto!</button>
+      <hr>
+      <div class="d-grid gap-2 col-4 mx-auto">
+        <div class="d-grid gap-2 mx-auto d-md-block">
+          <button class="btn btn-primary" [disabled]="MyForm.invalid" type="submit">¡Registrar producto!</button>
+        </div>
+      </div>
     </div>
   </form>
 </section>
