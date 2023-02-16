@@ -15,8 +15,8 @@ export class ProductsComponent {
     console.log(this.register)
   }
 
-  public showForm : boolean = false;
-  openForm(){
+  public showForm: boolean = false;
+  openForm() {
     this.showForm = !this.showForm
   }
 

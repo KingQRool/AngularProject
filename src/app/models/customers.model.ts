@@ -1,4 +1,4 @@
-export interface Customers{
+export interface Customers {
   customerId: String;
   customerName?: String;
   customerTelephone?: String;

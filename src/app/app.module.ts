@@ -30,7 +30,7 @@ import { TableProductsComponent } from './table-products/table-products/table-pr
     ReactiveFormsModule,
     CustomersModule,
     FormsModule
-    ],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

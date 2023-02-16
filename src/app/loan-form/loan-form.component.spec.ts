@@ -8,9 +8,9 @@ describe('LoanFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoanFormComponent ]
+      declarations: [LoanFormComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(LoanFormComponent);
     component = fixture.componentInstance;

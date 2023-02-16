@@ -15,36 +15,36 @@ export class LoanFormComponent {
   loanForm!: FormGroup;
 
   constructor(
-    private formBuilder:FormBuilder
-  ){
-      this.buildForm();
+    private formBuilder: FormBuilder
+  ) {
+    this.buildForm();
   }
 
-  buildForm(){
+  buildForm() {
     this.loanForm = this.formBuilder.group({
-      customerName:[''],
-      telephone:[''],
-      email:[''],
-      productType:[''],
-      productName:[''],
-      totalAmount:[''],
-      paymentDay:['']
+      customerName: [''],
+      telephone: [''],
+      email: [''],
+      productType: [''],
+      productName: [''],
+      totalAmount: [''],
+      paymentDay: ['']
     })
   }
 
-//get customerName(){ return this.customerForm.get('customerName')}
+  //get customerName(){ return this.customerForm.get('customerName')}
 
-  get customerName(){ return this.loanForm.get('customerName')}
-  get telephone(){ return this.loanForm.get('telephone')}
-  get email(){ return this.loanForm.get('email')}
-  get productType(){ return this.loanForm.get('productType')}
-  get productName(){ return this.loanForm.get('productName')}
-  get totalAmount(){ return this.loanForm.get('totalAmount')}
-  get paymentDay(){ return this.loanForm.get('paymentDay')}
+  get customerName() { return this.loanForm.get('customerName') }
+  get telephone() { return this.loanForm.get('telephone') }
+  get email() { return this.loanForm.get('email') }
+  get productType() { return this.loanForm.get('productType') }
+  get productName() { return this.loanForm.get('productName') }
+  get totalAmount() { return this.loanForm.get('totalAmount') }
+  get paymentDay() { return this.loanForm.get('paymentDay') }
 
-//get customerName(){ return this.loanForm.get('telephone')}
+  //get customerName(){ return this.loanForm.get('telephone')}
 
-  showCustomerName(){
+  showCustomerName() {
     console.log(this.customerName?.value);
     console.log(this.telephone?.value);
     console.log(this.email?.value);
@@ -52,28 +52,28 @@ export class LoanFormComponent {
     console.log(this.productName?.value);
     console.log(this.totalAmount?.value);
     console.log(this.paymentDay?.value);
-//    console.log(this.loanform?.value)
+    //    console.log(this.loanform?.value)
   }
 
-  openForm(){
+  openForm() {
 
     if (this.showForm) {
-  this.hideForm = false;
-  } else {
-  this.showForm = true;
-  }
+      this.hideForm = false;
+    } else {
+      this.showForm = true;
+    }
 
   }
 
-  hidenForm(){
+  hidenForm() {
     if (this.showForm) {
-  this.showForm = false;
-  } else {
-  this.hideForm = true;
-  }
+      this.showForm = false;
+    } else {
+      this.hideForm = true;
+    }
   }
 
-  sendForm(){
+  sendForm() {
     this.showCustomerName();
   }
 

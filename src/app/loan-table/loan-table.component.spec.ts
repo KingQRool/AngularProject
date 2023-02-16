@@ -8,9 +8,9 @@ describe('LoanTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoanTableComponent ]
+      declarations: [LoanTableComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(LoanTableComponent);
     component = fixture.componentInstance;

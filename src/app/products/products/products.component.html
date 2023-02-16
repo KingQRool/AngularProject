@@ -2,7 +2,7 @@
   <div class="container">
     <button (click)="openForm()" class="btn btn-light"><b>Crear producto</b></button>
     <hr>
-    <form  *ngIf="showForm"(ngSubmit)="onRegister()" #MyForm="ngForm">
+    <form *ngIf="showForm" (ngSubmit)="onRegister()" #MyForm="ngForm">
       <div class="col-12">
         <label>Seleccione el tipo de producto.</label>
         <hr>

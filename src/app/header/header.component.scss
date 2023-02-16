@@ -1,31 +1,30 @@
-body{
-  font-family:inherit;
+body {
+  font-family: inherit;
   line-height: 29px;
   font-size: medium;
 }
 
 
-.navbar{
+.navbar {
   background-color: #08b475;
 
 
-  &__nav-item{
+  &__nav-item {
     padding: 2px;
     margin: 5px;
     border: 2px solid #00754a;
 
   }
 
-  &__nav-link{
+  &__nav-link {
     text-decoration: none;
     background-color: #08b475;
     color: rgb(255, 255, 255);
 
-    &:hover{
+    &:hover {
       background-color: #0ac27e;
       border-radius: 4%;
 
     }
   }
 }
-
