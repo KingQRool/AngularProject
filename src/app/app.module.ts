@@ -11,13 +11,18 @@ import { CustomersModule } from './customers/customers.module';
 import { FormsModule } from "@angular/forms";
 
 
+import { ProductsComponent } from './products/products/products.component';
+import { TableProductsComponent } from './table-products/table-products/table-products.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     LoanTableComponent,
     LoanFormComponent,
     HeaderComponent,
-
+    ProductsComponent,
+    TableProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,7 @@ import { FormsModule } from "@angular/forms";
     ReactiveFormsModule,
     CustomersModule,
     FormsModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
