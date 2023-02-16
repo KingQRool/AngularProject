@@ -15,22 +15,9 @@ export class ProductsComponent {
     console.log(this.register)
   }
 
-  showForm: boolean = false;
-  hiddenForm: boolean = true;
+  public showForm : boolean = false;
   openForm(){
-    if (this.showForm){
-      this.hiddenForm = false;
-    } else{
-      this.showForm = true;
-    }
-  }
-
-  closeForm(){
-    if (this.showForm){
-      this.showForm = false;
-    }else{
-      this.hiddenForm = true;
-    }
+    this.showForm = !this.showForm
   }
 
 }
