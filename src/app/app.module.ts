@@ -25,14 +25,9 @@ import { ProductsModule } from './products/products.module';
     AppRoutingModule,
     ReactiveFormsModule,
     CustomersModule,
-<<<<<<< HEAD
-    FormsModule
-  ],
-=======
     FormsModule,
     ProductsModule
     ],
->>>>>>> feature/SMonroy-products
   providers: [],
   bootstrap: [AppComponent]
 })
