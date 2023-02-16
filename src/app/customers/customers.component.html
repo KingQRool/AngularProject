@@ -1,14 +1,50 @@
-<p>customers works!</p>
-
+<app-create-customer></app-create-customer>
+<h1>
+  - INTERFAZ DE USUARIO
+</h1>
 <section>
-  <div class="container">
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-  </div>
+<table class="customerTable table table-bordered">
+  <tbody>
+    <tr class="header">
+      <th>
+        ID Del Clientes
+      </th>
+      <th>
+        Nombre Del Cliente
+      </th>
+      <th>
+        Numero De Contacto
+      </th>
+      <th>
+        Direccion De Email
+      </th>
+      <th>
+        Tipo De Documento
+      </th>
+      <th>
+        Numero De Documento
+      </th>
+    </tr>
+    <tr *ngFor="let customers of customer">
+      <th>
+        {{customers.customerId}}
+      </th>
+      <td>
+        {{customers.customerName}}
+      </td>
+      <td>
+        {{customers.customerTelephone}}
+      </td>
+      <td>
+        {{customers.customerEmail}}
+      </td>
+      <td>
+        {{customers.customerDocumentType}}
+      </td>
+      <td>
+        {{customers.customerDocumentNumber}}
+      </td>
+    </tr>
+  </tbody>
+</table>
 </section>

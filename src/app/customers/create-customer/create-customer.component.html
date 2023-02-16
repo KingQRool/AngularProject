@@ -1,0 +1,66 @@
+<!-- {{nameField.value}}
+<input type="text" [formControl]="nameField">
+</p>
+<button (click)="getnameValue()" >Get value</button> -->
+<hr>
+<br>
+<div class="container p-2 my-1 border" id="headerCustomerForm">
+  <h1>Formulario Nuevo Cliente</h1>
+</div>
+
+<div class="container text-center" id="customerForm">
+
+  <form [formGroup]="customerForm" method="" class="customerForm row">
+    <div class="mb-3">
+
+        <div class="col-12">
+            <label class="form-label" for="">Tu Nombre</label>
+            <input formControlName="customerName" type="text" class="customerForm__customerName form-control" placeholder="Nombre Completo">
+            <div class="alert alert-danger mt-2" [hidden]="customerName?.valid || customerName?.pristine">Tu Nombre Es Obligatorio</div>
+        </div>
+        <div class="col-12">
+            <label class="form-label" for="">Tu Numero De Contacto</label>
+            <input formControlName="customerTelephone" type="text" class="form-control" placeholder="Numero De Contacto">
+        </div>
+        <div class="col-12">
+            <label class="form-label" for="">Tu Direccíon De Email</label>
+            <input formControlName="customerEmail" type="email" class="form-control" placeholder="Proporciona Un Email">
+            <div class="alert alert-danger mt-2" [hidden]="customerEmail?.valid || customerEmail?.pristine">Correo Electronico No Valido</div>
+        </div>
+          <br>
+        <div class="row">
+          <div class="col-5">
+            <label class="form-label" for="">Tipo De Documento</label>
+            <input formControlName="customerDocumentType" type="text" class="form-control" placeholder="Tu Tipo De Documento">
+            <div class="alert alert-danger mt-2" [hidden]="customerDocumentType?.valid || customerDocumentType?.pristine">Tipo De Documento Obligatorio</div>
+          </div>
+          <div class="col-7">
+            <label class="form-label" for="">Numero De Documento</label>
+            <input formControlName="customerDocumentNumber" type="text" class="form-control" placeholder="Tu Numero De Documento">
+            <div class="alert alert-danger mt-2" [hidden]="customerDocumentNumber?.valid || customerDocumentNumber?.pristine">El numero De Documento nEs Obligatorio</div>
+          </div>
+        </div>
+          <br>
+        <div class="col-12">
+            <label class="form-label" for="">Constraseña</label>
+            <input formControlName="customerPassword" type="password" class="form-control" placeholder="Escribe Tu Constraseña">
+        </div>
+            <br>
+        <div class="d-grid">
+          <div>
+            <button (click)="sendFormToShow()" class="btn btn-success" type="button" [disabled]="customerForm.invalid">Enviar Formulario</button>
+          </div>
+        </div>
+
+        <br>
+    </div>
+  </form>
+</div>
+
+{{ customerName?.errors | json }}
+<br>
+{{ customerName?.valid }}
+<br>
+{{ customerForm.valid }}
+<hr>
+
