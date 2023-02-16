@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
 
+<<<<<<< HEAD:src/app/products/products/products.component.ts
   register = {
     productName: '',
     productValue: ''
@@ -20,4 +21,6 @@ export class ProductsComponent {
     this.showForm = !this.showForm
   }
 
+=======
+>>>>>>> feature/SMonroy-products:src/app/products/products.component.ts
 }
