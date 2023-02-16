@@ -10,9 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { CustomersModule } from './customers/customers.module';
 import { FormsModule } from "@angular/forms";
 
-
-import { ProductsComponent } from './products/products/products.component';
-import { TableProductsComponent } from './table-products/table-products/table-products.component';
+import { ProductsModule } from './products/products.module';
 
 
 @NgModule({
@@ -20,16 +18,15 @@ import { TableProductsComponent } from './table-products/table-products/table-pr
     AppComponent,
     LoanTableComponent,
     LoanFormComponent,
-    HeaderComponent,
-    ProductsComponent,
-    TableProductsComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     CustomersModule,
-    FormsModule
+    FormsModule,
+    ProductsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

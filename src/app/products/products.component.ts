@@ -7,17 +7,4 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
 
-  register = {
-    productName: '',
-    productValue: ''
-  }
-  onRegister() {
-    console.log(this.register)
-  }
-
-  public showForm : boolean = false;
-  openForm(){
-    this.showForm = !this.showForm
-  }
-
 }
