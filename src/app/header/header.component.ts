@@ -7,21 +7,27 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   headerList = [
-    {id:1,
-    name:'Inicio',
-    path: '/Inicio'
+    {
+      id: 1,
+      name: 'Inicio',
+      path: '/Inicio'
     },
     {
-    id: 2,
-    name: 'Clientes',
-    path: '/Clientes'
+      id: 2,
+      name: 'Clientes',
+      path: '/Clientes'
     },
     {
-    id: 3,
-    name: 'Prestamos',
-    path: '/Prestamos'
-  }
-]
+      id: 3,
+      name: 'Prestamos',
+      path: '/Prestamos'
+    },
+    {
+      id: 4,
+      name: 'Productos',
+      path: '/Productos'
+    }
+  ]
 }
 
 

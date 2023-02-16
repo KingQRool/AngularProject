@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CustomersComponent } from './customers/customers.component';
 import { LoanFormComponent } from './loan-form/loan-form.component';
+import { ProductsComponent } from './products/products/products.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,12 @@ const routes: Routes = [
   {
     path: 'Prestamos',
     component: LoanFormComponent,
-//    loadChildren: () => import('./loan-form/loan-form.MODULE').then(m => m.LoanFormMODULE),
+    //    loadChildren: () => import('./loan-form/loan-form.MODULE').then(m => m.LoanFormMODULE),
+  },
+  {
+    path: 'Productos',
+    component: ProductsComponent,
+    loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
   }
 
 ];
