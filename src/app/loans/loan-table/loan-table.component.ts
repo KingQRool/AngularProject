@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Loan } from '../models/loan.model';
+import { Loan } from '../../models/loan.model';
 
 @Component({
   selector: 'app-loan-table',
