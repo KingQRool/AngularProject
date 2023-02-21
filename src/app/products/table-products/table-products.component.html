@@ -4,41 +4,13 @@
         <thead>
           <tr>
             <th scope="col">Id</th>
-            <th scope="col">Tipo producto</th>
             <th scope="col">Nombre producto</th>
-            <th scope="col">Valor producto</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Convenio SUAM.</td>
-            <td>-----LLENAR-----</td>
-            <td>60000</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>PA Bancolombia.</td>
-            <td>-----LLENAR-----</td>
-            <td>95000</td>
+          <tr *ngFor="let product of products">
+            <th scope="row">{{product.id}}</th>
+            <td>{{product.productName}}</td>
           </tr>
         </tbody>
       </table>
