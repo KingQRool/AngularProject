@@ -7,7 +7,18 @@
     box-shadow: 0px 0px 5px 5px;
     top: 10%;
     left: 40%;
-    background-color: aquamarine;
+    background-color: #10b474;
+    height: 500px;
+
 
   }
+}
+.formProduct__error-message{
+
+  &__span{
+    background-color: red;
+  }
+}
+.success-message{
+  background-color: red;
 }
