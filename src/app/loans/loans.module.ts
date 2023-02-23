@@ -3,18 +3,20 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoanTableComponent } from './loan-table/loan-table.component';
 import { LoanFormComponent } from './loan-form/loan-form.component';
+import { LoansComponent } from './loans.component';
 
 @NgModule({
   declarations: [
     LoanFormComponent,
-    LoanTableComponent
+    LoanTableComponent,
+    LoansComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule
   ],
   exports:[
-    LoanFormComponent
+    LoansComponent
   ]
 })
 export class LoansModule { }

@@ -1,11 +1,12 @@
 <hr>
 <br>
-<div class="container">
-  <form [formGroup]="loanForm" action="" method="POST" class="row" *ngIf="showForm">
+<section class="loanSection">
+  <div class="container">
+  <form class="loanSection__loanForm" [formGroup]="loanForm" action="" method="POST" class="row" *ngIf="showForm">
     <div class="row" id="izquierda">
       <h4>Datos Persona</h4>
       <div class="col-12">
-        <label class="form-label" for="">Tu Nombre:</label>
+        <label class="form-label" for="">Tu| Nombre:</label>
         <input formControlName="customerName" type="text" class="form-control" placeholder="Escribe Tu Nombre">
       </div>
       <div class="col-12">
@@ -57,7 +58,8 @@
       </div>
     </div>
   </form>
-</div>
+  </div>
+</section>
 <br>
 <div class="d-grid gap-2 col-4 mx-auto">
   <div class="d-grid gap-2 mx-auto d-md-block">
@@ -66,4 +68,4 @@
 </div>
 <hr>
 <br>
-<app-loan-table></app-loan-table>
+

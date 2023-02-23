@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     path: 'Prestamos',
     component: LoanFormComponent,
-    //    loadChildren: () => import('./loan-form/loan-form.MODULE').then(m => m.LoanFormMODULE),
+        loadChildren: () => import('./loans/loans.module').then(m => m.LoansModule),
   },
   {
     path: 'Productos',

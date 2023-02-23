@@ -1,6 +1,8 @@
-export interface Customer {
+export interface Customers {
   customerId: String;
-  customerName: String;
-  telephone: String;
-  Email?: String;
+  customerName?: String;
+  customerTelephone?: String;
+  customerEmail?: String
+  customerDocumentType?: String;
+  customerDocumentNumber?: String;
 }

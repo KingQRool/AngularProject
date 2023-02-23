@@ -1,4 +1,4 @@
-import { Customer } from "./customer.model";
+import { Customers } from "./customer.model";
 
 export interface Loan {
   loanId: String;
@@ -6,7 +6,7 @@ export interface Loan {
   productName: String;
   totalAmount: Number;
   paymentDay: String;
-  customer: Customer;
+  customer: Customers;
 
 }
 

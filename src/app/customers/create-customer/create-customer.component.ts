@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Customers } from 'src/app/models/customer.model';
+
+// @Input() createCustomer : Array<Customers>=[];
+// @Output() sendCustomer : EventEmitter<Customers> = new EventEmitter();
 
 @Component({
   selector: 'app-create-customer',
@@ -16,6 +20,10 @@ export class CreateCustomerComponent {
   // nameField = new FormControl();
 
   customerForm!: FormGroup;
+  customerNameS = new FormGroup<any>('', Validators.required);
+  customerTelephoneS = new FormGroup<any>('', Validators.required);
+  customerEmailS = new FormGroup<any>('', Validators.required);
+
 
     constructor(
       private customerFormBuilder:FormBuilder
@@ -53,5 +61,18 @@ export class CreateCustomerComponent {
     sendFormToShow(){
       this.showCustomerFormValues();
     }
+
+    // addCustomer(){
+    //   if (this.customerNameS.valid && this.customerTelephoneS.valid && this.customerEmailS.valid) {
+    //     const customer = {
+    //       id : 0,
+    //       this.customerName : this.customerName.value,
+    //       this.customerTelephone : this.customerTelephone.value,
+    //       this.customerEmail : this.customerEmail.value
+    //     }
+    //     this.sendCustomer.emit(customer)
+    //   }
+
+    // }
 
 }
