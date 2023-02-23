@@ -5,7 +5,7 @@
     <form (ngSubmit)="submit()" class="productSection__formProduct p-5" *ngIf="showForm"
       (ngSubmit)="onRegister()">
       <p class= "formProduct__error-message"><b>Nombre:</b>
-        <input type="text" id="name" [formControl]="productName" required class="form-control"
+        <input type="text" onkeydown="return /[a-z, ]/i.test(event.key)"  minlength="5" maxlength="20" id="name" [formControl]="productName" required class="form-control"
           placeholder="Dígite el nombre del producto.">
           <br>
           <span class="badge badge-danger formProduct__error-message__span" *ngIf="productName.invalid">(El nombre no puede quedar vacío)</span>
