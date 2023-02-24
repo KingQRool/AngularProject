@@ -3,30 +3,29 @@
 <div class="container p-2 my-1 border" id="headerCustomerForm">
   <h1>Formulario Nuevo Cliente</h1>
 </div>
-
 <div class="container text-center" id="customerForm">
 <section>
-  <form [formGroup]="customerForm" method="" class="customerForm row">
+  <form (ngSubmit)="submit()" (ngSubmit)="onRegister" class="customerForm row">
     <div class="mb-3">
         <div class="col-12">
             <label class="form-label" for="">Tu Nombre</label>
-            <input formControlName="customerName" type="text" class="customerForm__customerName form-control" placeholder="Nombre Completo">
-            <div class="alert alert-danger mt-2" [hidden]="customerName?.valid || customerName?.pristine">Tu Nombre Es Obligatorio</div>
+            <input [formControl]="customerName"  type="text" class="customerForm__customerName form-control" placeholder="Nombre Completo">
+
         </div>
         <div class="col-12">
             <label class="form-label" for="">Tu Numero De Contacto</label>
-            <input formControlName="customerTelephone" type="text" class="form-control" placeholder="Numero De Contacto">
+            <input [formControl]="customerTelephone" type="text" class="form-control" placeholder="Proporciona Un Telefono">
         </div>
         <div class="col-12">
             <label class="form-label" for="">Tu Direccíon De Email</label>
-            <input formControlName="customerEmail" type="email" class="form-control" placeholder="Proporciona Un Email">
-            <div class="alert alert-danger mt-2" [hidden]="customerEmail?.valid || customerEmail?.pristine">Correo Electronico No Valido</div>
+            <input [formControl]="customerEmail" type="email" class="form-control" placeholder="Proporciona Un Email">
+
         </div>
           <br>
           <br>
         <div class="d-grid">
           <div>
-            <button (click)="sendFormToShow()" class="btn btn-success" type="button" [disabled]="customerForm.invalid">Enviar Formulario</button>
+            <button (click)="addCustomer()" (click)="sendFormToShow()" class="btn btn-success" type="button" >Enviar Formulario</button>
           </div>
         </div>
 
@@ -36,10 +35,5 @@
 </section>
 </div>
 
-{{ customerName?.errors | json }}
-<br>
-{{ customerName?.valid }}
-<br>
-{{ customerForm.valid }}
 <hr>
 
