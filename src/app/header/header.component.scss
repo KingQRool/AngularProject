@@ -4,28 +4,26 @@ body {
   font-size: medium;
 }
 
-
 .navbar {
-  background-color: #08b475;
+  background-image: linear-gradient(to right, black, gray);
+  list-style: none;
+  display: flex;
 
 
   &__nav-item {
     padding: 2px;
     margin: 5px;
-    border: 2px solid #00754a;
 
   }
 
   &__nav-link {
     text-decoration: none;
-    background-color: #08b475;
     color: rgb(255, 255, 255);
 
     &:hover {
-      background-color: #0ac27e;
+      background-color: gray;
       border-radius: 4%;
       cursor: pointer;
-
     }
   }
 }
