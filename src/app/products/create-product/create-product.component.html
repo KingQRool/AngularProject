@@ -8,17 +8,17 @@
         <input type="text" onkeydown="return /[a-z, ]/i.test(event.key)"  minlength="5" maxlength="20" id="name" [formControl]="productName" required class="form-control"
           placeholder="Dígite el nombre del producto.">
           <br>
-          <span class="badge badge-danger formProduct__error-message__span" *ngIf="productName.invalid">(El nombre no puede quedar vacío)</span>
+          <span class="badge badge-danger formProduct__error-message__span" *ngIf="productName.invalid">(El nombre debe tener más de 5 cáracteres.)</span>
       </p>
       <hr>
       <div class="d-grid gap-2 col-4 mx-auto">
         <div class="d-grid gap-2 mx-auto d-md-block">
-          <button (click)="addProduct()" class="btn btn-primary" [disabled]="productName.invalid"
+          <button (click)="addProduct()" (click)="successMessage = false" class="btn btn-primary" [disabled]="productName.invalid"
             type="submit">¡Registrar producto!</button>
         </div>
       </div>
-      <div *ngIf="productName.valid" class="alert alert-success">
-        {{resultado}}
+      <div id="successMessage" *ngIf="successMessage == false" class="alert alert-success">
+        Producto registrado con éxito.
       </div>
     </form>
   </div>

@@ -11,9 +11,10 @@ export class CreateProductComponent {
   @Input() createProduct: Array<Product> = [];
   @Output() sendProduct: EventEmitter<Product> = new EventEmitter();
 
+
   resultado!: string;
   error: boolean = false;
-
+  successMessage = true;
   productName = new FormControl<any>('', Validators.required);
 
   constructor(
