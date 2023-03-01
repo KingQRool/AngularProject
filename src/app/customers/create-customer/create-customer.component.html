@@ -20,7 +20,7 @@
 
         <div class="col-12">
           <label class="form-label" for="">Tu Numero De Contacto</label>
-          <input [formControl]="customerTelephone" type="text" class="form-control"
+          <input type="number"  [formControl]="customerTelephone" class="form-control"
             placeholder="Proporciona Un Telefono">
         </div>
         <div class="messages alert alert-dark" [class.active]="customerTelephone.touched && customerTelephone.invalid">

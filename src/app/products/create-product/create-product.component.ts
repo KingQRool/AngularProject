@@ -15,7 +15,7 @@ export class CreateProductComponent {
   resultado!: string;
   error: boolean = false;
   successMessage = true;
-  productName = new FormControl<any>('', Validators.required);
+  productName = new FormControl<any>('', [Validators.maxLength(20), Validators.minLength(5), Validators.required ]);
 
   constructor(
   ) { }
