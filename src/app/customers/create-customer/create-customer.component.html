@@ -1,37 +1,39 @@
-<hr>
 <br>
+<hr>
 <div class="container p-2 my-1 border" id="headerCustomerForm">
   <h1>Formulario Nuevo Cliente</h1>
 </div>
 <div class="container text-center" id="customerForm">
-<section>
-  <form (ngSubmit)="submit()" (ngSubmit)="onRegister" class="customerForm row">
-    <div class="mb-3">
+  <section>
+    <form (ngSubmit)="submit()" (ngSubmit)="onRegister" class="customerForm row">
+      <div class="mb-3">
         <div class="col-12">
-            <label class="form-label" for="">Tu Nombre</label>
-            <input [formControl]="customerName"  type="text" class="customerForm__customerName form-control" placeholder="Nombre Completo">
+          <label class="form-label" for="">Tu Nombre</label>
+          <input [formControl]="customerName" type="text" class="customerForm__customerName form-control"
+            placeholder="Nombre Completo">
 
         </div>
         <div class="col-12">
-            <label class="form-label" for="">Tu Numero De Contacto</label>
-            <input [formControl]="customerTelephone" type="text" class="form-control" placeholder="Proporciona Un Telefono">
+          <label class="form-label" for="">Tu Numero De Contacto</label>
+          <input [formControl]="customerTelephone" type="text" class="form-control"
+            placeholder="Proporciona Un Telefono">
         </div>
         <div class="col-12">
-            <label class="form-label" for="">Tu Direccíon De Email</label>
-            <input [formControl]="customerEmail" type="email" class="form-control" placeholder="Proporciona Un Email">
+          <label class="form-label" for="">Tu Direccíon De Email</label>
+          <input [formControl]="customerEmail" type="email" class="form-control" placeholder="Proporciona Un Email">
 
         </div>
-          <br>
-          <br>
+        <br>
+        <br>
         <div class="d-grid">
           <div>
-            <button (click)="addCustomer()" (click)="sendFormToShow()" class="btn btn-success" type="button" >Enviar Formulario</button>
+            <button (click)="addCustomer()" (click)="sendFormToShow()" class="btn btn-success" type="button">Enviar
+              Formulario</button>
           </div>
         </div>
       </div>
       <br>
-  </form>
-</section>
+    </form>
+  </section>
 </div>
-
 <hr>

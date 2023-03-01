@@ -7,7 +7,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class HeaderComponent {
 
-  navbarfixed : boolean = false;
+  navbarfixed: boolean = false;
 
   headerList = [
     {

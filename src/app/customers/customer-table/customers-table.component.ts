@@ -9,9 +9,9 @@ import { Customers } from "../../models/customer.model"
 
 export class CustomersTableComponent {
 
-  @Input() customers: Customers[]=[];
+  @Input() customers: Customers[] = [];
 
-  showCustomers(){
+  showCustomers() {
     console.log(this.customers);
   }
 

@@ -13,47 +13,47 @@ export class CustomersComponent {
       customerId: '1',
       customerName: 'Miguel Angel',
       customerTelephone: '234567',
-      customerEmail:'example@gmail.com',
+      customerEmail: 'example@gmail.com',
 
     },
     {
       customerId: '2',
       customerName: 'Rafael Sanzio',
       customerTelephone: '345678',
-      customerEmail:'R.Sanzio@gmail.com',
+      customerEmail: 'R.Sanzio@gmail.com',
 
     },
     {
       customerId: '3',
       customerName: 'Sandro Botticeli',
       customerTelephone: '345678',
-      customerEmail:'San.Bottie@gmail.com',
+      customerEmail: 'San.Bottie@gmail.com',
 
     },
     {
       customerId: '4',
       customerName: 'Antonio Allegri',
       customerTelephone: '456789',
-      customerEmail:'Anton10@gmail.com',
+      customerEmail: 'Anton10@gmail.com',
 
     },
     {
       customerId: '5',
       customerName: 'Fra Angelico',
       customerTelephone: '567890',
-      customerEmail:'Angel.Fra@gmail.com',
+      customerEmail: 'Angel.Fra@gmail.com',
 
     }
   ];
 
-  createCustomer: Customers[]=[
+  createCustomer: Customers[] = [
 
   ]
 
-  loadCustomer(customer:Customers){
+  loadCustomer(customer: Customers) {
     console.log(customer)
     this.customer.push(customer)
-}
+  }
 
 
 
