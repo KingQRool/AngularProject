@@ -6,7 +6,7 @@ import { Product } from 'src/app/models/product.model';
   styleUrls: ['./table-products.component.scss']
 })
 export class TableProductsComponent {
-  @Input() products : Product[]=[];
+  @Input() products: Product[] = [];
   showForm: boolean = false;
   hiddenForm: boolean = true;
 
@@ -18,13 +18,11 @@ export class TableProductsComponent {
     }
   }
 
-  showProducts(){
+  showProducts() {
     console.log(this.products);
   }
 
   ngOnInit(): void {
     this.showProducts();
   }
-
-
 }

@@ -34,7 +34,7 @@ export class ProductsComponent {
   createProduct: Product[] = [
   ]
 
-  loadProduct(product : Product){
+  loadProduct(product: Product) {
     console.log(product)
     this.products.push(product)
   }
