@@ -1,57 +1,49 @@
-<table>
-
-  <tr class="header">
-    <th>
-      Id del prestamo
-    </th>
-    <th>
-      Tipo de Prestamo
-    </th>
-    <th>
-      Tipo Del Producto
-    </th>
-    <th>
-      Monto Total
-    </th>
-    <th>
-      Fecha De Mora
-    </th>
-    <th>
-      Cliente
-    </th>
-  </tr>
-
-  <tr *ngFor="let loan of loans" class="body">
-
-    <td>
-      {{loan.loanId}}
+<div class="container">
+  <table>
+    <tr class="header">
+      <th>
+        Id del prestamo
+      </th>
+      <th>
+        Tipo de Producto
+      </th>
+      <th>
+        Nombre del Producto
+      </th>
+      <th>
+        Monto Total
+      </th>
+      <th>
+        Fecha De Mora
+      </th>
+      <th>
+        Cliente
+      </th>
+    </tr>
+    <tr *ngFor="let loan of loans" class="body">
+      <td>
+        {{loan.loanId}}
+      </td>
+      <td>
+        {{loan.productType}}
+      </td>
+      <td>
+        {{loan.productName}}
+      </td>
+      <td>
+        {{loan.totalAmount}}
+      </td>
+      <td>
+        {{loan.paymentDay}}
+      </td>
+      <td>
+    <tr>
+      <td>
+        {{loan.customer.customerName}}
+        {{loan.customer.customerId}}
+      </td>
+    </tr>
     </td>
-
-    <td>
-      {{loan.productType}}
-    </td>
-
-    <td>
-      {{loan.productName}}
-    </td>
-
-    <td>
-      {{loan.totalAmount}}
-    </td>
-
-    <td>
-      {{loan.paymentDay}}
-    </td>
-    <td>
-  <tr>
-    <td>
-      {{loan.customer.customerName}}
-      {{loan.customer.customerId}}
-    </td>
-  </tr>
-
-  </td>
-
-  </tr>
-
-</table>
+    </tr>
+  </table>
+</div>

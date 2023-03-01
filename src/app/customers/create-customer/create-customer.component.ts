@@ -54,9 +54,9 @@ export class CreateCustomerComponent {
 
     }
 
-    sendFormToShow(){
-      this.showCustomerFormValues();
-    }
+  sendFormToShow() {
+    this.showCustomerFormValues();
+  }
 
     addCustomer(){
       if (this.customerName.valid){

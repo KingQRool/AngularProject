@@ -70,7 +70,4 @@ export class LoanTableComponent {
       paymentDay: '12/2/21'
     }
   ];
-
-
 }
-

@@ -1,2 +1,2 @@
-<app-table-products></app-table-products>
-<app-create-product></app-create-product>
+<app-table-products [products]="products"></app-table-products>
+<app-create-product [createProduct]="products" (sendProduct)="loadProduct($event)"></app-create-product>
