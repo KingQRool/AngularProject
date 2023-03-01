@@ -13,21 +13,18 @@ export class CreateCustomerComponent {
   @Input() createCustomer: Array<Customers> = [];
   @Output() sendCustomer: EventEmitter<Customers> = new EventEmitter();
 
-  customerName = new FormControl<any>('', Validators.required);
-  customerTelephone = new FormControl<any>('');
-  customerEmail = new FormControl<any>('');
+  customerName = new FormControl<any>('', [Validators.required, Validators.maxLength(20)],);
+  customerTelephone = new FormControl<any>('', Validators.required);
+  customerEmail = new FormControl<any>('', [Validators.required, Validators.email]);
 
-  //---------------CONSTRUCTOR ANTERIOR-----------------\\
-  // constructor(
-  //   private customerFormBuilder:FormBuilder
-  // ){
-  //     this.buildCustomerForm();
-  // }
-  //----------------------------------------------------\\
 
   constructor() {
 
   }
+
+  get isNameFieldValid() { return this.customerName.touched && this.customerName.valid;}
+
+  get isNameFieldInvalid() { return this.customerName.touched && this.customerName.invalid;}
 
   onRegister() {
     console.log(this.customerName.value),
@@ -89,4 +86,11 @@ export class CreateCustomerComponent {
   // get customerPassword(){ return this.customerForm.get('customerPassword')}
   // ------------------------------------------------------------------------------------------\\
 
+   //---------------CONSTRUCTOR ANTERIOR-----------------\\
+  // constructor(
+  //   private customerFormBuilder:FormBuilder
+  // ){
+  //     this.buildCustomerForm();
+  // }
+  //----------------------------------------------------\\
 }
