@@ -1,54 +1,53 @@
 <hr>
 <div class="container">
-<h1>
-  - INTERFAZ DE USUARIO
-</h1>
-<section>
-<table class="customerTable table table-bordered">
-  <tbody>
-    <tr class="header">
-      <th>
-        ID Del Clientes
-      </th>
-      <th>
-        Nombre Del Cliente
-      </th>
-      <th>
-        Numero De Contacto
-      </th>
-      <th>
-        Direccion De Email
-      </th>
-      <th>
-        Tipo De Documento
-      </th>
-      <th>
-        Numero De Documento
-      </th>
-    </tr>
-    <tr *ngFor="let customers of customer">
-      <th>
-        {{customers.customerId}}
-      </th>
-      <td>
-        {{customers.customerName}}
-      </td>
-      <td>
-        {{customers.customerTelephone}}
-      </td>
-      <td>
-        {{customers.customerEmail}}
-      </td>
-      <td>
-        {{customers.customerDocumentType}}
-      </td>
-      <td>
-        {{customers.customerDocumentNumber}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-</section>
-<app-create-customer></app-create-customer>
+  <h1>
+    - INTERFAZ DE USUARIO
+  </h1>
+  <section>
+    <table class="customerTable table table-bordered">
+      <tbody>
+        <tr class="header">
+          <th>
+            ID Del Clientes
+          </th>
+          <th>
+            Nombre Del Cliente
+          </th>
+          <th>
+            Numero De Contacto
+          </th>
+          <th>
+            Direccion De Email
+          </th>
+          <th>
+            Tipo De Documento
+          </th>
+          <th>
+            Numero De Documento
+          </th>
+        </tr>
+        <tr *ngFor="let customers of customer">
+          <th>
+            {{customers.customerId}}
+          </th>
+          <td>
+            {{customers.customerName}}
+          </td>
+          <td>
+            {{customers.customerTelephone}}
+          </td>
+          <td>
+            {{customers.customerEmail}}
+          </td>
+          <td>
+            {{customers.customerDocumentType}}
+          </td>
+          <td>
+            {{customers.customerDocumentNumber}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <app-create-customer></app-create-customer>
 </div>
-
