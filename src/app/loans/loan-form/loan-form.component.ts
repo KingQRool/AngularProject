@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-loan-form',
@@ -20,11 +20,14 @@ export class LoanFormComponent {
     this.buildForm();
   }
 
-  buildForm() {
+
+  private buildForm() {
     this.loanForm = this.formBuilder.group({
-      customerName: [''],
-      telephone: [''],
-      email: [''],
+      personData: this.formBuilder.group({
+        customerName: ['',[Validators.required, Validators.maxLength(10), Validators.pattern(/^[a-zA-Z ]+$/)]],
+        telephone: ['',Validators.required],
+        email: ['',Validators.required, Validators.email],
+      }),
       productType: [''],
       productName: [''],
       totalAmount: [''],
@@ -32,7 +35,6 @@ export class LoanFormComponent {
     })
   }
 
-  //get customerName(){ return this.customerForm.get('customerName')}
 
   get customerName() { return this.loanForm.get('customerName') }
   get telephone() { return this.loanForm.get('telephone') }
