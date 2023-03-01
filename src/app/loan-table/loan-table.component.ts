@@ -16,7 +16,7 @@ export class LoanTableComponent {
       customer: {
         customerId: '1',
         customerName: 'Sutanito I',
-        telephone: '23456765'
+        customerTelephone: '23456765'
       },
       paymentDay: '12/2/21'
     },
@@ -28,7 +28,7 @@ export class LoanTableComponent {
       customer: {
         customerId: '2',
         customerName: 'Peranito X',
-        telephone: '2345678'
+        customerTelephone: '2345678'
       },
       paymentDay: '04/19/22'
     },
@@ -40,7 +40,7 @@ export class LoanTableComponent {
       customer: {
         customerId: '3',
         customerName: 'Juanito IV',
-        telephone: '4567876'
+        customerTelephone: '4567876'
       },
       paymentDay: '12/2/21'
     },
@@ -52,7 +52,7 @@ export class LoanTableComponent {
       customer: {
         customerId: '4',
         customerName: 'Fabian I',
-        telephone: '34567892'
+        customerTelephone: '34567892'
       },
       paymentDay: '0/0/0'
     },
@@ -64,12 +64,9 @@ export class LoanTableComponent {
       customer: {
         customerId: '5',
         customerName: 'julianita XX',
-        telephone: '23456765'
+        customerTelephone: '23456765'
       },
       paymentDay: '12/2/21'
     }
   ];
-
-
 }
-
