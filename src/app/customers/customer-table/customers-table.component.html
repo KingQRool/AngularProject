@@ -1,39 +1,41 @@
-<h1>
-  - INTERFAZ DE USUARIO
-</h1>
-<section>
-<table class="customerTable table table-bordered">
-  <tbody>
-    <tr class="header">
-      <th>
-        ID Del Clientes
-      </th>
-      <th>
-        Nombre Del Cliente
-      </th>
-      <th>
-        Numero De Contacto
-      </th>
-      <th>
-        Direccion De Email
-      </th>
+<div class="container">
+  <h1>
+    - INTERFAZ DE USUARIO
+  </h1>
+  <section>
+    <table class="customerTable table table-bordered">
+      <tbody>
+        <tr class="header">
+          <th>
+            ID Del Clientes
+          </th>
+          <th>
+            Nombre Del Cliente
+          </th>
+          <th>
+            Numero De Contacto
+          </th>
+          <th>
+            Direccion De Email
+          </th>
 
-    </tr>
-    <tr *ngFor="let customer of customers">
-      <th>
-      {{ customer.customerId }}
-      </th>
-      <td>
-      {{customer.customerName}}
-      </td>
-      <td>
-        {{customer.customerTelephone}}
-      </td>
-      <td>
-        {{customer.customerEmail}}
-      </td>
+        </tr>
+        <tr *ngFor="let customer of customers">
+          <th>
+            {{ customer.customerId }}
+          </th>
+          <td>
+            {{customer.customerName}}
+          </td>
+          <td>
+            {{customer.customerTelephone}}
+          </td>
+          <td>
+            {{customer.customerEmail}}
+          </td>
 
-    </tr>
-  </tbody>
-</table>
-</section>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

@@ -94,4 +94,11 @@ export class CreateCustomerComponent {
   // }
   //----------------------------------------------------\\
 
+   //---------------CONSTRUCTOR ANTERIOR-----------------\\
+  // constructor(
+  //   private customerFormBuilder:FormBuilder
+  // ){
+  //     this.buildCustomerForm();
+  // }
+  //----------------------------------------------------\\
 }

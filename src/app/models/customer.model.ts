@@ -3,5 +3,4 @@ export interface Customers {
   customerName?: String;
   customerTelephone?: String;
   customerEmail?: String
-
 }
