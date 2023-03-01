@@ -15,17 +15,21 @@ h1,h2,h3,h4{
   width:40%;
 }
 
+.customerForm__labelName{
+  padding-top: 30px;
+}
+
 label{
-  font-family:'Courier New', Courier, monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: large;
 }
 
-.col-12{
-padding: 5px;
-}
-
-.col-6{
-  padding: 5px;
+.messages {
+  opacity: 0;
+  transition: all .3s ease-in;
+  &.active {
+    opacity: 1;
+  }
 }
 
 // button{

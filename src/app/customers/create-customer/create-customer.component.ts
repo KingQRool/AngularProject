@@ -13,30 +13,27 @@ export class CreateCustomerComponent {
   @Input() createCustomer: Array<Customers>  = [];
   @Output() sendCustomer: EventEmitter<Customers> = new EventEmitter();
 
-    customerName = new FormControl<any>('',Validators.required);
-    customerTelephone = new FormControl<any>('');
-    customerEmail = new FormControl<any>('');
+    customerName = new FormControl<any>('',[Validators.required, Validators.maxLength(20)],);
+    customerTelephone = new FormControl<any>('',Validators.required);
+    customerEmail = new FormControl<any>('',[Validators.required, Validators.email]);
 
-//---------------CONSTRUCTOR ANTERIOR-----------------\\
-    // constructor(
-    //   private customerFormBuilder:FormBuilder
-    // ){
-    //     this.buildCustomerForm();
-    // }
-//----------------------------------------------------\\
 
     constructor(){
 
     }
 
+    get isNameFieldValid() { return this.customerName.touched && this.customerName.valid;}
+
+    get isNameFieldInvalid() { return this.customerName.touched && this.customerName.invalid;}
+
     onRegister(){
-        console.log(this.customerName.value),
-        console.log(this.customerTelephone.value),
-        console.log(this.customerEmail.value)
+      console.log(this.customerName.value),
+      console.log(this.customerTelephone.value),
+      console.log(this.customerEmail.value)
     }
 
     showCustomers(){
-        console.log(this.createCustomer)
+      console.log(this.createCustomer)
     }
 
     submit(){
@@ -70,23 +67,31 @@ export class CreateCustomerComponent {
       }
     }
 
-// ------------------------------VALIDACIONES ANTERIORES------------------------------------\\
+    // ------------------------------VALIDACIONES ANTERIORES------------------------------------\\
     // buildCustomerForm(){
-    //   this.customerForm = this.customerFormBuilder.group({
-    //       customerName:['',[Validators.required, Validators.maxLength(20)]],
-    //       customerTelephone:[''],
-    //       customerEmail:['',[Validators.required, Validators.email]]
-    //   })
-    // }
-//------------------------------------------------------------------------------------------\\
+      //   this.customerForm = this.customerFormBuilder.group({
+        //       customerName:['',[Validators.required, Validators.maxLength(20)]],
+        //       customerTelephone:[''],
+        //       customerEmail:['',[Validators.required, Validators.email]]
+        //   })
+        // }
+        //------------------------------------------------------------------------------------------\\
 
-// ------------------------------MOSTRAR EN CONSOLA-----------------------------------------\\
-    // get customerName(){ return this.customerForm.get('customerName')}
-    // get customerTelephone(){ return this.customerForm.get('customerTelephone')}
-    // get customerEmail(){ return this.customerForm.get('customerEmail')}
-    // get customerDocumentType(){return this.customerForm.get('customerDocumentType')}
-    // get customerDocumentNumber(){ return this.customerForm.get('customerDocumentNumber')}
-    // get customerPassword(){ return this.customerForm.get('customerPassword')}
-// ------------------------------------------------------------------------------------------\\
+        // ------------------------------MOSTRAR EN CONSOLA-----------------------------------------\\
+        // get customerName(){ return this.customerForm.get('customerName')}
+        // get customerTelephone(){ return this.customerForm.get('customerTelephone')}
+        // get customerEmail(){ return this.customerForm.get('customerEmail')}
+        // get customerDocumentType(){return this.customerForm.get('customerDocumentType')}
+        // get customerDocumentNumber(){ return this.customerForm.get('customerDocumentNumber')}
+        // get customerPassword(){ return this.customerForm.get('customerPassword')}
+        // ------------------------------------------------------------------------------------------\\
 
-}
+        //---------------CONSTRUCTOR ANTERIOR-----------------\\
+            // constructor(
+            //   private customerFormBuilder:FormBuilder
+            // ){
+            //     this.buildCustomerForm();
+            // }
+        //----------------------------------------------------\\
+
+      }

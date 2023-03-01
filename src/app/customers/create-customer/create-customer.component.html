@@ -6,26 +6,46 @@
 <div class="container text-center" id="customerForm">
 <section>
   <form (ngSubmit)="submit()" (ngSubmit)="onRegister" class="customerForm row">
-    <div class="mb-3">
-        <div class="col-12">
-            <label class="form-label" for="">Tu Nombre</label>
-            <input [formControl]="customerName"  type="text" class="customerForm__customerName form-control" placeholder="Nombre Completo">
 
+    <div class="mb-3">
+            <label class="customerForm__labelName form-label" for="">Tu Nombre</label>
+            <input [formControl]="customerName"  type="text" class="customerForm__customerName form-control" placeholder="Nombre Completo">
+            <div class="col-12">
+              <div class="messages alert alert-dark" [class.active]="isNameFieldInvalid">
+
+                  <strong *ngIf="customerName.hasError('required')">⮬ Tu nombre es requerido ⮭</strong>
+
+              </div>
         </div>
-        <div class="col-12">
+
+        <div class="mb-3">
             <label class="form-label" for="">Tu Numero De Contacto</label>
-            <input [formControl]="customerTelephone" type="text" class="form-control" placeholder="Proporciona Un Telefono">
+            <input [formControl]="customerTelephone" type="tel" class="form-control" placeholder="Proporciona Un Telefono">
+            <div class="messages alert alert-dark" [class.active]="customerTelephone.touched && customerTelephone.invalid">
+
+                <strong *ngIf="customerTelephone.hasError('required')">⮬ El numero de contacto es requerido ⮭</strong>
+
+            </div>
         </div>
-        <div class="col-12">
+
+        <div class="mb-3">
             <label class="form-label" for="">Tu Direccíon De Email</label>
             <input [formControl]="customerEmail" type="email" class="form-control" placeholder="Proporciona Un Email">
+              <div class="messages alert alert alert-dark" [class.active]="customerEmail.touched && customerEmail.invalid">
 
+                  <strong *ngIf="customerEmail.hasError('required')">⮬ Este campo es requerido ⮭</strong>
+
+
+                  <strong *ngIf="customerEmail.hasError('email')">⮬ Este no es un emial valido ⮭</strong>
+
+              </div>
         </div>
+
           <br>
           <br>
         <div class="d-grid">
           <div>
-            <button (click)="addCustomer()" (click)="sendFormToShow()" class="btn btn-success" type="button" >Enviar Formulario</button>
+            <button [disabled]="customerEmail.invalid " (click)="addCustomer()" (click)="sendFormToShow()" class="btn btn-success" type="button" >Enviar Formulario</button>
           </div>
         </div>
 
