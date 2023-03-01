@@ -11,12 +11,13 @@ label {
   padding: 10px;
 }
 
-.loanSection{
+.loanSection {
   position: relative;
-    &__loanform{
-    position:fixed;
+
+  &__loanform {
+    position: fixed;
     border-radius: 2px;
-    box-shadow: 0px 0px  5px 0px;
+    box-shadow: 0px 0px 5px 0px;
     top: 10%;
   }
 }
