@@ -2,62 +2,62 @@
 <br>
 <section class="loanSection">
   <div class="container">
-  <form class="loanSection__loanForm" [formGroup]="loanForm" action="" method="POST" class="row" *ngIf="showForm">
-    <div class="row" id="izquierda">
-      <h4>Datos Persona</h4>
-      <div class="col-12">
-        <label class="form-label" for="">Tu| Nombre:</label>
-        <input formControlName="customerName" type="text" class="form-control" placeholder="Escribe Tu Nombre">
+    <form class="loanSection__loanForm" [formGroup]="loanForm" action="" method="POST" class="row" *ngIf="showForm">
+      <div class="row" id="izquierda">
+        <h4>Datos Persona</h4>
+        <div class="col-12">
+          <label class="form-label" for="">Tu| Nombre:</label>
+          <input formControlName="customerName" type="text" class="form-control" placeholder="Escribe Tu Nombre">
+        </div>
+        <div class="col-12">
+          <label class="form-label" for="">Tu Numero De Contacto:</label>
+          <input formControlName="telephone" type="text" class="form-control" placeholder="Escribe Tu Telefono">
+        </div>
+        <div class="col-12">
+          <label class="form-label" for="">Tu Direccíon De Email:</label>
+          <input formControlName="email" type="email" class="form-control" placeholder="Escribe Tu Email">
+        </div>
       </div>
-      <div class="col-12">
-        <label class="form-label" for="">Tu Numero De Contacto:</label>
-        <input formControlName="telephone" type="text" class="form-control" placeholder="Escribe Tu Telefono">
+      <div class="row">
+        <h4>Datos Producto</h4>
+        <br><br><br>
+        <div class="col-6">
+          <label for="">Producto Deseado:</label>
+          <select formControlName="productType" class="form-select" aria-label="Default select example">
+            <option selected>Elija Su Tipo De Producto:</option>
+            <option value="Finaktiva">Finaktiva</option>
+            <option value="Factoring">Factoring</option>
+            <option value="Confirming">Confirming</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <label for="">Nombre Del Producto:</label>
+          <select formControlName="productName" class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option value="1-Credito Inteligente">Credito Inteligente</option>
+            <option value="2-Credito Nomina">Credito Nomina</option>
+            <option value="3-Linea Mujer">Linea Mujer</option>
+            <option value="4-Convenio SUAM">Convenio SUAM</option>
+            <option value="5-PA Bancolombia">PA Bancolombia</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <label class="form-label" for="">De Cuanto Es Tu Prestamo</label>
+          <input formControlName="totalAmount" type="number" class="form-control" placeholder="Monto Del Prestamo">
+        </div>
+        <div class="col-6">
+          <label class="form-label" for="">Dinos Tu Fecha De Pago</label>
+          <input formControlName="paymentDay" type="date" class="form-control" placeholder="Dinos Tu Fecha De Pago">
+        </div>
       </div>
-      <div class="col-12">
-        <label class="form-label" for="">Tu Direccíon De Email:</label>
-        <input formControlName="email" type="email" class="form-control" placeholder="Escribe Tu Email">
+      <br>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <div class="d-grid gap-3 mx-auto d-md-block">
+          <button (click)="hidenForm()" class="btn btn-danger" type="button">Cerrar Formulario</button>
+          <button (click)="sendForm()" class="btn btn-success" type="button">Enviar Formulario</button>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <h4>Datos Producto</h4>
-      <br><br><br>
-      <div class="col-6">
-        <label for="">Producto Deseado:</label>
-        <select formControlName="productType" class="form-select" aria-label="Default select example">
-          <option selected>Elija Su Tipo De Producto:</option>
-          <option value="Finaktiva">Finaktiva</option>
-          <option value="Factoring">Factoring</option>
-          <option value="Confirming">Confirming</option>
-        </select>
-      </div>
-      <div class="col-6">
-        <label for="">Nombre Del Producto:</label>
-        <select formControlName="productName" class="form-select" aria-label="Default select example">
-          <option selected></option>
-          <option value="1-Credito Inteligente">Credito Inteligente</option>
-          <option value="2-Credito Nomina">Credito Nomina</option>
-          <option value="3-Linea Mujer">Linea Mujer</option>
-          <option value="4-Convenio SUAM">Convenio SUAM</option>
-          <option value="5-PA Bancolombia">PA Bancolombia</option>
-        </select>
-      </div>
-      <div class="col-6">
-        <label class="form-label" for="">De Cuanto Es Tu Prestamo</label>
-        <input formControlName="totalAmount" type="number" class="form-control" placeholder="Monto Del Prestamo">
-      </div>
-      <div class="col-6">
-        <label class="form-label" for="">Dinos Tu Fecha De Pago</label>
-        <input formControlName="paymentDay" type="date" class="form-control" placeholder="Dinos Tu Fecha De Pago">
-      </div>
-    </div>
-    <br>
-    <div class="d-grid gap-2 col-6 mx-auto">
-      <div class="d-grid gap-3 mx-auto d-md-block">
-        <button (click)="hidenForm()" class="btn btn-danger" type="button">Cerrar Formulario</button>
-        <button (click)="sendForm()" class="btn btn-success" type="button">Enviar Formulario</button>
-      </div>
-    </div>
-  </form>
+    </form>
   </div>
 </section>
 <br>
@@ -68,4 +68,3 @@
 </div>
 <hr>
 <br>
-
