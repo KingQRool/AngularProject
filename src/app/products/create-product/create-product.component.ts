@@ -11,7 +11,8 @@ export class CreateProductComponent {
   @Input() createProduct: Array<Product> = [];
   @Output() sendProduct: EventEmitter<Product> = new EventEmitter();
 
-
+  showForm: boolean = false;
+  hideForm: boolean = false;
   resultado!: string;
   error: boolean = false;
   successMessage = true;
@@ -24,7 +25,6 @@ export class CreateProductComponent {
     console.log(this.productName.value)
   }
 
-  public showForm: boolean = false;
   openForm() {
     this.showForm = !this.showForm
   }
@@ -42,6 +42,14 @@ export class CreateProductComponent {
 
   ngOnInit(): void {
     this.showProducts();
+  }
+
+  hidenForm() {
+    if (this.showForm) {
+      this.showForm = false;
+    } else {
+      this.hideForm = true;
+    }
   }
 
   addProduct() {
