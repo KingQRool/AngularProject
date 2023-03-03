@@ -5,10 +5,10 @@
     <form (ngSubmit)="submit()" class="productSection__formProduct p-5" *ngIf="showForm"
       (ngSubmit)="onRegister()">
       <p class= "formProduct__error-message"><b>Nombre:</b>
-        <input type="text" onkeydown="return /[a-z, ]/i.test(event.key)"  minlength="5" maxlength="20" id="name" [formControl]="productName" required class="form-control"
+        <input type="text" onkeydown="return /[á-z,]/i.test(event.key)"  minlength="5" maxlength="20" id="name" [formControl]="productName" required class="form-control"
           placeholder="Dígite el nombre del producto.">
           <br>
-          <span class="badge badge-danger formProduct__error-message__span" *ngIf="productName.invalid && (productName.touched)" >(El nombre debe tener más de 5 cáracteres.)</span>
+          <span class="badge badge-danger formProduct__error-message__span" *ngIf="productName.invalid && (productName.touched)" >(El producto debe de tener más de 5 cáracteres. )</span>
       </p>
       <hr>
       <div class="d-grid gap-2 col-4 mx-auto">
