@@ -22,9 +22,9 @@ export class CreateCustomerComponent {
 
   }
 
-  get isNameFieldValid() { return this.customerName.touched && this.customerName.valid;}
+  get isNameFieldValid() { return this.customerName.touched && this.customerName.valid; }
 
-  get isNameFieldInvalid() { return this.customerName.touched && this.customerName.invalid;}
+  get isNameFieldInvalid() { return this.customerName.touched && this.customerName.invalid; }
 
   onRegister() {
     console.log(this.customerName.value),
@@ -85,6 +85,14 @@ export class CreateCustomerComponent {
   // get customerDocumentNumber(){ return this.customerForm.get('customerDocumentNumber')}
   // get customerPassword(){ return this.customerForm.get('customerPassword')}
   // ------------------------------------------------------------------------------------------\\
+
+  //---------------CONSTRUCTOR ANTERIOR-----------------\\
+  // constructor(
+  //   private customerFormBuilder:FormBuilder
+  // ){
+  //     this.buildCustomerForm();
+  // }
+  //----------------------------------------------------\\
 
    //---------------CONSTRUCTOR ANTERIOR-----------------\\
   // constructor(
