@@ -4,7 +4,7 @@
     <hr>
     <form (ngSubmit)="submit()" class="productSection__formProduct p-5" *ngIf="showForm" (ngSubmit)="onRegister()">
       <p class="formProduct__error-message"><b>Nombre:</b>
-        <input type="text" onkeydown="return /[á-z,]/i.test(event.key)" minlength="5" maxlength="20" id="name"
+        <input [class.is-valid]="productName.valid && productName.touched" [class.is-invalid]="productName.invalid && productName.touched" type="text" onkeydown="return /[á-z,]/i.test(event.key)" minlength="5" maxlength="20" id="name"
           [formControl]="productName" required class="form-control" placeholder="Dígite el nombre del producto.">
         <br>
         <span class="badge badge-danger formProduct__error-message__span"

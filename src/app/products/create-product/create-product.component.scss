@@ -1,3 +1,15 @@
+input{
+  &.is-valid{
+    border: 2px solid green;
+    opacity: 1;
+    transition: all 0.1s ease-in;
+  }
+  &.is-invalid{
+    border: 2px solid red;
+    opacity: 1;
+  }
+}
+
 .productSection {
   position: relative;
 
