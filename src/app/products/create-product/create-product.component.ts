@@ -33,6 +33,14 @@ export class CreateProductComponent {
     console.log(this.createProduct);
   }
 
+  hidenForm() {
+    if (this.showForm) {
+      this.showForm = false;
+    } else {
+      this.hideForm = true;
+    }
+  }
+
   submit() {
     if (this.productName.valid)
       this.resultado = "Todos los datos son válidos";
@@ -42,14 +50,6 @@ export class CreateProductComponent {
 
   ngOnInit(): void {
     this.showProducts();
-  }
-
-  hidenForm() {
-    if (this.showForm) {
-      this.showForm = false;
-    } else {
-      this.hideForm = true;
-    }
   }
 
   addProduct() {
