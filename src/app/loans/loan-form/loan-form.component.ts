@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -20,41 +20,53 @@ export class LoanFormComponent {
     this.buildForm();
   }
 
+  ngOninit(): void {
 
-  private buildForm() {
+  }
+
+  save(event: Event) {
+    if (this.loanForm.valid){
+      console.log(this.loanForm?.value);
+    } else {
+      this.loanForm.markAllAsTouched();
+    }
+  }
+
+  buildForm() {
     this.loanForm = this.formBuilder.group({
       personData: this.formBuilder.group({
         customerName: ['',[Validators.required, Validators.maxLength(10), Validators.pattern(/^[a-zA-Z ]+$/)]],
-        telephone: ['',Validators.required],
-        email: ['',Validators.required, Validators.email],
+        telephone: ['',[Validators.required]],
+        email: ['',[Validators.required, Validators.email]],
       }),
-      productType: [''],
-      productName: [''],
-      totalAmount: [''],
-      paymentDay: ['']
+      productType: ['',[Validators.required]],
+      productName: ['',[Validators.required]],
+      totalAmount: ['',[Validators.required, Validators.pattern(/^[0-9 ]+$/)]],
+      paymentDay: ['',[Validators.required]]
     })
   }
 
 
-  get customerName() { return this.loanForm.get('customerName') }
-  get telephone() { return this.loanForm.get('telephone') }
-  get email() { return this.loanForm.get('email') }
+
+
+
+  get personData() { return this.loanForm.get('personData') }
+
+  get personName() { return this.loanForm.get('personData.customerName') }
+  get personTelephone() { return this.loanForm.get('personData.telephone') }
+  get personEmail() { return this.loanForm.get('personData.email') }
+
   get productType() { return this.loanForm.get('productType') }
   get productName() { return this.loanForm.get('productName') }
   get totalAmount() { return this.loanForm.get('totalAmount') }
   get paymentDay() { return this.loanForm.get('paymentDay') }
 
-  //get customerName(){ return this.loanForm.get('telephone')}
-
   showCustomerName() {
-    console.log(this.customerName?.value);
-    console.log(this.telephone?.value);
-    console.log(this.email?.value);
+    console.log(this.personData?.value);
     console.log(this.productType?.value);
     console.log(this.productName?.value);
     console.log(this.totalAmount?.value);
     console.log(this.paymentDay?.value);
-    //    console.log(this.loanform?.value)
   }
 
   openForm() {
@@ -78,5 +90,6 @@ export class LoanFormComponent {
   sendForm() {
     this.showCustomerName();
   }
+
 
 }

@@ -3,13 +3,14 @@
 <div class="container">
   <section class="loanSection">
     <div class="container">
-      <form class="loanSection__loanForm" [formGroup]="loanForm" class="row" *ngIf="showForm">
+      <form class="loanSection__loanForm" [formGroup]="loanForm" class="row" *ngIf="showForm" (ngSubmit)="save($event)">
 
-        <div class="row" id="izquierda" formGroupName="PersonData">
+        <div class="row" id="izquierda" formGroupName="personData">
           <h4>Datos Persona</h4>
           <div class="col-12">
             <label class="form-label" for="">Tu Nombre:</label>
             <input formControlName="customerName" type="text" class="form-control" placeholder="Escribe Tu Nombre">
+
           </div>
           <div class="col-12">
             <label class="form-label" for="">Tu Numero De Contacto:</label>
@@ -46,7 +47,7 @@
 
           <div class="col-6">
             <label class="form-label" for="">De Cuanto Es Tu Prestamo</label>
-            <input formControlName="totalAmount" type="number" class="form-control" placeholder="Monto Del Prestamo">
+            <input formControlName="totalAmount" type="text" class="form-control" placeholder="Monto Del Prestamo">
           </div>
           <div class="col-6">
             <label class="form-label" for="">Dinos Tu Fecha De Pago</label>
@@ -59,7 +60,7 @@
         <div class="d-grid gap-2 col-6 mx-auto">
           <div class="d-grid gap-3 mx-auto d-md-block">
             <button (click)="hidenForm()" class="btn btn-danger" type="button">Cerrar Formulario</button>
-            <button (click)="sendForm()" class="btn btn-success" type="button">Enviar Formulario</button>
+            <button (click)="sendForm()" class="btn btn-success" type="submit">Enviar Formulario</button>
           </div>
         </div>
 
