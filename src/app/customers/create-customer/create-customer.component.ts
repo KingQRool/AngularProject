@@ -27,13 +27,11 @@ export class CreateCustomerComponent {
   get isNameFieldInvalid() { return this.customerName.touched && this.customerName.invalid; }
 
   onRegister() {
-    console.log(this.customerName.value),
-      console.log(this.customerTelephone.value),
-      console.log(this.customerEmail.value)
+
   }
 
   showCustomers() {
-    console.log(this.createCustomer)
+
   }
 
   submit() {
@@ -45,9 +43,7 @@ export class CreateCustomerComponent {
   }
 
   showCustomerFormValues() {
-    console.log(this.customerName?.value);
-    console.log(this.customerTelephone?.value)
-    console.log(this.customerEmail?.value)
+
 
   }
 
