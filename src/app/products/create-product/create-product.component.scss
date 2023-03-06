@@ -1,5 +1,18 @@
+input{
+  &.is-valid{
+    border: 2px solid green;
+    opacity: 1;
+    transition: all 0.1s ease-in;
+  }
+  &.is-invalid{
+    border: 2px solid red;
+    opacity: 1;
+  }
+}
+
 .productSection {
   position: relative;
+
   &__formProduct {
     position: fixed;
     border-radius: 15px;
@@ -8,15 +21,14 @@
     left: 37%;
     background-color: #E9E9E9;
     height: 500px;
+    width: 380px;
     z-index: 10;
   }
 }
-.formProduct__error-message{
 
-  &__span{
+.formProduct__error-message {
+
+  &__span {
     background-color: red;
   }
-}
-.success-message{
-  background-color: red;
 }
