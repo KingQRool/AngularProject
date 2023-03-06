@@ -26,7 +26,7 @@ export class LoanFormComponent {
 
   save(event: Event) {
     if (this.loanForm.valid){
-      console.log(this.loanForm?.value);
+      (this.loanForm?.value);
     } else {
       this.loanForm.markAllAsTouched();
     }
@@ -62,11 +62,7 @@ export class LoanFormComponent {
   get paymentDay() { return this.loanForm.get('paymentDay') }
 
   showCustomerName() {
-    console.log(this.personData?.value);
-    console.log(this.productType?.value);
-    console.log(this.productName?.value);
-    console.log(this.totalAmount?.value);
-    console.log(this.paymentDay?.value);
+
   }
 
   openForm() {
