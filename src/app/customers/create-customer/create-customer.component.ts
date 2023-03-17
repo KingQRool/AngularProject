@@ -67,38 +67,4 @@ export class CreateCustomerComponent {
     }
   }
 
-  // ------------------------------VALIDACIONES ANTERIORES------------------------------------\\
-  // buildCustomerForm(){
-  //   this.customerForm = this.customerFormBuilder.group({
-  //       customerName:['',[Validators.required, Validators.maxLength(20)]],
-  //       customerTelephone:[''],
-  //       customerEmail:['',[Validators.required, Validators.email]]
-  //   })
-  // }
-  //------------------------------------------------------------------------------------------\\
-
-  // ------------------------------MOSTRAR EN CONSOLA-----------------------------------------\\
-  // get customerName(){ return this.customerForm.get('customerName')}
-  // get customerTelephone(){ return this.customerForm.get('customerTelephone')}
-  // get customerEmail(){ return this.customerForm.get('customerEmail')}
-  // get customerDocumentType(){return this.customerForm.get('customerDocumentType')}
-  // get customerDocumentNumber(){ return this.customerForm.get('customerDocumentNumber')}
-  // get customerPassword(){ return this.customerForm.get('customerPassword')}
-  // ------------------------------------------------------------------------------------------\\
-
-  //---------------CONSTRUCTOR ANTERIOR-----------------\\
-  // constructor(
-  //   private customerFormBuilder:FormBuilder
-  // ){
-  //     this.buildCustomerForm();
-  // }
-  //----------------------------------------------------\\
-
-   //---------------CONSTRUCTOR ANTERIOR-----------------\\
-  // constructor(
-  //   private customerFormBuilder:FormBuilder
-  // ){
-  //     this.buildCustomerForm();
-  // }
-  //----------------------------------------------------\\
 }
