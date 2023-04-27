@@ -27,7 +27,7 @@ export class CreateCustomerComponent {
   get isNameFieldInvalid() { return this.customerName.touched && this.customerName.invalid; }
 
   onRegister() {
-    (this.customerName.value),
+      (this.customerName.value),
       (this.customerTelephone.value),
       (this.customerEmail.value)
   }
