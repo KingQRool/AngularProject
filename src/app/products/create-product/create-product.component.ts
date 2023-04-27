@@ -30,7 +30,7 @@ export class CreateProductComponent {
   }
 
   showProducts() {
-    console.log(this.createProduct);
+    (this.createProduct);
   }
 
   submit() {

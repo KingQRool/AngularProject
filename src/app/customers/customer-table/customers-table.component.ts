@@ -12,7 +12,7 @@ export class CustomersTableComponent {
   @Input() customers: Customers[] = [];
 
   showCustomers() {
-    console.log(this.customers);
+    (this.customers);
   }
 
   ngOnInit(): void {

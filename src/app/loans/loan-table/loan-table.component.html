@@ -1,5 +1,5 @@
 <div class="container">
-  <table>
+  <table class="customerTable table table-bordered">
     <tr class="header">
       <th>
         Id del prestamo
@@ -21,9 +21,9 @@
       </th>
     </tr>
     <tr *ngFor="let loan of loans" class="body">
-      <td>
+      <th>
         {{loan.loanId}}
-      </td>
+      </th>
       <td>
         {{loan.productType}}
       </td>

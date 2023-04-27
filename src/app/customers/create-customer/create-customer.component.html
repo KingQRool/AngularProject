@@ -1,14 +1,15 @@
 <br>
 <hr>
+
 <div class="container p-2 my-1 border" id="headerCustomerForm">
   <h1>Formulario Nuevo Cliente</h1>
 </div>
+
 <div class="container text-center" id="customerForm">
   <section>
-    <form (ngSubmit)="submit()" (ngSubmit)="onRegister" class="customerForm row">
+    <form class="customerForm row" (ngSubmit)="submit()" (ngSubmit)="onRegister">
 
       <div class="mb-3">
-
         <label class="customerForm__labelName form-label" for="">Tu Nombre</label>
         <input [formControl]="customerName" type="text" class="customerForm__customerName form-control"
           placeholder="Nombre Completo">

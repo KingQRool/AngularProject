@@ -1,2 +1,2 @@
-<app-loan-form></app-loan-form>
-<app-loan-table></app-loan-table>
+<app-loan-form [loanForm]="loans" (sendLoan)="loadLoan($event)"></app-loan-form>
+<app-loan-table [loans]="loans"></app-loan-table>
