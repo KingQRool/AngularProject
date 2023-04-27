@@ -92,7 +92,7 @@ export class LoanFormComponent {
         productName: this.productName.value,
         totalAmount: this.totalAmount.value,
         paymentDay: this.paymentDay.value,
-        customer: this.customerName.value
+        customer: this.customerEmail.value
       }
       this.sendLoan.emit(loan)
     }

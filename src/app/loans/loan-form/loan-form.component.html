@@ -1,12 +1,12 @@
 <hr>
-<br>
-<br>
-
 <div class="container">
   <section class="loanSection">
     <div class="container">
       <form class="loanSection__loanForm" class="row" *ngIf="showForm" (ngSubmit)="submit()" (ngSubmit)="onRegister">
-
+        <div class="container p-2 my-1 border" id="headerCustomerForm">
+          <h1>Formulario Prestamo</h1>
+        </div>
+        <br>
         <div class="row" id="izquierda" >
           <h4>Datos Persona</h4>
             <div class="col-12">
@@ -43,6 +43,7 @@
           <div class="col-6">
             <label for="">Producto Deseado:</label>
             <select [formControl]="productType" class="form-select" aria-label="Default select example">
+              <option value="" selected disabled>Selecciona Tu Tipo De Producto</option>
               <option value="Finaktiva">Finaktiva</option>
               <option value="Factoring">Factoring</option>
               <option value="Confirming">Confirming</option>
@@ -54,7 +55,8 @@
 
           <div class="col-6">
             <label for="">Nombre Del Producto:</label>
-            <select [formControl]="productName" class="form-select" aria-label="Default select example">
+            <select  [formControl]="productName" class="form-select">
+              <option value="" selected disabled>Selecciona Una Opción</option>
               <option value="1-Credito Inteligente">Credito Inteligente</option>
               <option value="2-Credito Nomina">Credito Nomina</option>
               <option value="3-Linea Mujer">Linea Mujer</option>
