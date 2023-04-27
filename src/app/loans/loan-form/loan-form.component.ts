@@ -29,6 +29,10 @@ export class LoanFormComponent {
   constructor(){
   }
 
+  get isNameFieldValid() { return this.customerName.touched && this.customerName.valid; }
+
+  get isNameFieldInvalid() { return this.customerName.touched && this.customerName.invalid; }
+
   onRegister() {
     (this.customerName.value),
       (this.customerTelephone.value),
@@ -36,7 +40,7 @@ export class LoanFormComponent {
   }
 
   showLoans() {
-    console.log(this.loanForm)
+    (this.loanForm)
   }
 
   submit() {

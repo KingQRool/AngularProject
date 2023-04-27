@@ -11,16 +11,28 @@
             <div class="col-12">
               <label class="form-label" for="">Tu Nombre:</label>
               <input [formControl]="customerName" type="text" class="form-control" placeholder="Escribe Tu Nombre">
+              <div class="messages alert alert-dark"
+            [class.active]="customerName.touched && customerName.invalid">
+            <strong *ngIf="customerName.hasError('required')">⮬ El numero de contacto es requerido ⮭</strong>
+          </div>
             </div>
 
           <div class="col-12">
             <label class="form-label" for="">Tu Numero De Contacto:</label>
             <input [formControl]="customerTelephone" type="text" class="form-control" placeholder="Escribe Tu Telefono">
+            <div class="messages alert alert-dark"
+            [class.active]="customerTelephone.touched && customerTelephone.invalid">
+            <strong *ngIf="customerTelephone.hasError('required')">⮬ El numero de contacto es requerido ⮭</strong>
+          </div>
           </div>
 
           <div class="col-12">
             <label class="form-label" for="">Tu Direccíon De Email:</label>
             <input [formControl]="customerEmail" type="email" class="form-control" placeholder="Escribe Tu Email">
+            <div class="messages alert alert alert-dark" [class.active]="customerEmail.touched && customerEmail.invalid">
+              <strong *ngIf="customerEmail.hasError('required')">⮬ Este campo es requerido ⮭</strong>
+              <strong *ngIf="customerEmail.hasError('email')">⮬ Este no es un emial valido ⮭</strong>
+            </div>
           </div>
         </div>
 
@@ -34,6 +46,9 @@
               <option value="Factoring">Factoring</option>
               <option value="Confirming">Confirming</option>
             </select>
+            <div class="messages alert alert alert-dark" [class.active]="productType.touched && productType.invalid">
+              <strong *ngIf="productType.hasError('required')">⮬ Este campo es requerido ⮭</strong>
+            </div>
           </div>
 
           <div class="col-6">
@@ -45,15 +60,25 @@
               <option value="4-Convenio SUAM">Convenio SUAM</option>
               <option value="5-PA Bancolombia">PA Bancolombia</option>
             </select>
+            <div class="messages alert alert alert-dark" [class.active]="productName.touched && productName.invalid">
+              <strong *ngIf="productName.hasError('required')">⮬ Este campo es requerido ⮭</strong>
+            </div>
           </div>
 
           <div class="col-6">
             <label class="form-label" for="">De Cuanto Es Tu Prestamo</label>
             <input [formControl]="totalAmount" type="text" class="form-control" placeholder="Monto Del Prestamo">
+            <div class="messages alert alert alert-dark" [class.active]="totalAmount.touched && totalAmount.invalid">
+              <strong *ngIf="totalAmount.hasError('required')">⮬ Este campo es requerido ⮭</strong>
+            </div>
           </div>
+
           <div class="col-6">
             <label class="form-label" for="">Dinos Tu Fecha De Pago</label>
             <input [formControl]="paymentDay" type="date" class="form-control" placeholder="Dinos Tu Fecha De Pago">
+            <div class="messages alert alert alert-dark" [class.active]="paymentDay.touched && paymentDay.invalid">
+              <strong *ngIf="paymentDay.hasError('required')">⮬ Este campo es requerido ⮭</strong>
+            </div>
           </div>
         </div>
 
@@ -62,7 +87,7 @@
         <div class="d-grid gap-2 col-6 mx-auto">
           <div class="d-grid gap-3 mx-auto d-md-block">
             <button (click)="hidenForm()" class="btn btn-danger" type="button">Cerrar Formulario</button>
-            <button (click)="addLoan()" (click)="sendLoanToShow()" class="btn btn-success" type="button">Enviar Formulario</button>
+            <button (click)="addLoan()" (click)="sendLoanToShow()" class="btn btn-success" type="button" [disabled]="paymentDay.invalid">Enviar Formulario</button>
           </div>
         </div>
 
