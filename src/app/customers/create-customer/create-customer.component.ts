@@ -45,9 +45,7 @@ export class CreateCustomerComponent {
   }
 
   showCustomerFormValues() {
-    console.log(this.customerName?.value);
-    console.log(this.customerTelephone?.value)
-    console.log(this.customerEmail?.value)
+
 
   }
 

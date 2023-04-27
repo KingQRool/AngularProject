@@ -51,7 +51,7 @@ export class CustomersComponent {
   ]
 
   loadCustomer(customer: Customers) {
-    console.log(customer)
+
     this.customer.push(customer)
   }
 
